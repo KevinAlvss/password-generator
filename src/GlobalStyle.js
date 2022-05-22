@@ -18,4 +18,9 @@ export default createGlobalStyle`
         color: #CACDD7;
     }
 
+    button{
+        border: none;
+        cursor: pointer;
+    }
+
 `

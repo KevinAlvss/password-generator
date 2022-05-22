@@ -19,6 +19,13 @@ export const GeneratedPasswordBox = styled.div`
     border-radius: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    min-width: 600px;
+`;
+
+export const ButtonBox = styled.div`
+    display: flex;
+    align-items: center;
 `;
 
 export const VerticalLine = styled.div`
@@ -39,8 +46,6 @@ export const CopyButton = styled.button`
     height: 100px;
     width: 100px;
     background-color: transparent;
-    border: none;
-    cursor: pointer;
     transition: ease-in-out .2s;
 
     img > {
@@ -51,4 +56,15 @@ export const CopyButton = styled.button`
     &:hover{
         opacity: .5;
     }
+`;
+
+export const GenerateNewPasswordButton = styled.button`
+    background-color: #2B64F0;
+    font-size: 28px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px 0px;
+    border-radius: 5px;
+    width: 600px;
 `;
