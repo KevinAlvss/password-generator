@@ -20,7 +20,7 @@ export const GeneratedPasswordBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 600px;
+    width: 600px;
 `;
 
 export const ButtonBox = styled.div`
@@ -61,10 +61,74 @@ export const CopyButton = styled.button`
 export const GenerateNewPasswordButton = styled.button`
     background-color: #2B64F0;
     font-size: 28px;
-    margin-top: 40px;
     text-transform: uppercase;
     font-weight: bold;
     padding: 20px 0px;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 600px;
+`;
+
+export const PasswordOptions = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 40px 0;
+    gap: 15px;
+
+    > p {
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #576086;
+    }
+`;
+
+export const Setting = styled.div`
+    background-color: #091642;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+
+    > p {
+        font-size: 23px;
+    }
+`;
+
+export const ToggleButton = styled.input`
+    all: unset;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #14244C;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out;
+
+    &:checked{
+        background-color: #2B64F0;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: #B8BDC9;
+        border: 1px solid #666;
+        border-radius: 50%;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%) scale(1, 1);
+        transition: left 200ms ease-in-out, transform 150ms ease-in-out, background-color 100ms ease-in-out;
+    }
+
+    &:checked::after{
+        left: calc(100% - 25px);
+        background-color: #fff;
+    }
+
 `;
