@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { 
   Container, 
   Title, 
@@ -21,7 +21,16 @@ function App() {
   const [hasNumbers, setHasNumbers] = useState(true);
   const [hasSymbols, setHasSymbols] = useState(false);
 
-  function generatePassword(){
+  function copyPassword(){
+    navigator.clipboard.writeText(password);
+    notify();
+  }
+
+  function notify(){
+    toast.success("Password copied to clipboard!", {theme: "dark"})
+  }
+
+  const generatePassword = useCallback(() => {
     const length = 10;
     let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numbers = "0123456789";
@@ -39,22 +48,11 @@ function App() {
     }
 
     setPassword(newPassword);
-  }
-
-  function copyPassword(){
-    navigator.clipboard.writeText(password);
-    notify();
-  }
-
-  function notify(){
-    toast.success("Password copied to clipboard!", {theme: "dark"})
-  }
+  },[hasNumbers, hasSymbols])
 
   useEffect(() => {
     generatePassword();
-  },[])
-
-  console.log(hasSymbols);
+  },[generatePassword])
 
   return (
     <Container>

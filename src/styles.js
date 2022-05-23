@@ -49,8 +49,7 @@ export const CopyButton = styled.button`
     transition: ease-in-out .2s;
 
     img > {
-        height: 100px;
-        width: 100px;
+        height: max-content;
     }
 
     &:hover{
