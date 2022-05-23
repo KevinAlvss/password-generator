@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { 
   Container, 
   Title, 
+  Content,
   GeneratedPasswordBox, 
   VerticalLine, 
   GeneratedPasswordInputBox, 
@@ -58,40 +59,42 @@ function App() {
     <Container>
       <Title>Password generator</Title>
 
-      <GeneratedPasswordBox>
-        <GeneratedPasswordInputBox value={password} readOnly/>
-        <ButtonBox>
-          <VerticalLine />
-          <CopyButton onClick={() => copyPassword()}>
-            <img src={copy} alt="copy"/>
-          </CopyButton>
-        </ButtonBox>
-      </GeneratedPasswordBox>
+      <Content>
+        <GeneratedPasswordBox>
+          <GeneratedPasswordInputBox value={password} readOnly/>
+          <ButtonBox>
+            <VerticalLine />
+            <CopyButton onClick={() => copyPassword()}>
+              <img src={copy} alt="copy"/>
+            </CopyButton>
+          </ButtonBox>
+        </GeneratedPasswordBox>
 
-      <PasswordOptions>
-        <p>settings</p>
-        <Setting>
-          <p>Include numbers</p>
-          <ToggleButton 
-            type={"checkbox"} 
-            onChange={() => {setHasNumbers(!hasNumbers)}}
-            checked={hasNumbers}
-          />
-        </Setting>
+        <PasswordOptions>
+          <p>settings</p>
+          <Setting>
+            <p>Include numbers</p>
+            <ToggleButton 
+              type={"checkbox"} 
+              onChange={() => {setHasNumbers(!hasNumbers)}}
+              checked={hasNumbers}
+            />
+          </Setting>
 
-        <Setting>
-          <p>Include symbols</p>
-          <ToggleButton 
-            type={"checkbox"}
-            onChange={() => {setHasSymbols(!hasSymbols)}}
-            checked={hasSymbols}
-          />
-        </Setting>
-      </PasswordOptions>
+          <Setting>
+            <p>Include symbols</p>
+            <ToggleButton 
+              type={"checkbox"}
+              onChange={() => {setHasSymbols(!hasSymbols)}}
+              checked={hasSymbols}
+            />
+          </Setting>
+        </PasswordOptions>
 
-      <GenerateNewPasswordButton onClick={() => generatePassword()}>
-        Generate Password
-      </GenerateNewPasswordButton>
+        <GenerateNewPasswordButton onClick={() => generatePassword()}>
+          Generate Password
+        </GenerateNewPasswordButton>
+      </Content>
 
     </Container>
   );

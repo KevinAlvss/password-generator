@@ -14,13 +14,22 @@ export const Title = styled.h1`
     margin-bottom: 30px;
 `;
 
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 650px;
+`;
+
 export const GeneratedPasswordBox = styled.div`
     background-color: #091642;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 600px;
+    width: 100%;
 `;
 
 export const ButtonBox = styled.div`
@@ -64,13 +73,13 @@ export const GenerateNewPasswordButton = styled.button`
     font-weight: bold;
     padding: 20px 0px;
     border-radius: 10px;
-    width: 600px;
+    width: 100%;
 `;
 
 export const PasswordOptions = styled.div`
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 100%;
     margin: 40px 0;
     gap: 15px;
 
