@@ -12,6 +12,10 @@ export const Container = styled.div`
 export const Title = styled.h1`
     font-size: 48px;
     margin-bottom: 30px;
+
+    @media (max-width: 700px) {
+        font-size: 40px;
+    }
 `;
 
 export const Content = styled.div`
@@ -21,6 +25,10 @@ export const Content = styled.div`
     justify-content: center;
     height: fit-content;
     width: 650px;
+
+    @media (max-width: 700px) {
+        width: 80%;
+    }
 `;
 
 export const GeneratedPasswordBox = styled.div`
@@ -49,6 +57,7 @@ export const GeneratedPasswordInputBox = styled.input`
     background-color: transparent;
     font-size: 38px;
     padding: 20px;
+    width: 100%;
 `;
 
 export const CopyButton = styled.button`
