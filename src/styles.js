@@ -10,11 +10,11 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size: 48px;
+    font-size: 2.8rem;
     margin-bottom: 30px;
 
     @media (max-width: 700px) {
-        font-size: 40px;
+        font-size: 2rem;
     }
 `;
 
@@ -49,13 +49,14 @@ export const VerticalLine = styled.div`
     height: 80px;
     width: 2px;
     background-color: #F9FDFF;
+    opacity: .5;
 `;
 
 export const GeneratedPasswordInputBox = styled.input`
     border: none;
     color: #F9FDFF;
     background-color: transparent;
-    font-size: 38px;
+    font-size: 2rem;
     padding: 20px;
     width: 100%;
 `;
@@ -65,9 +66,12 @@ export const CopyButton = styled.button`
     width: 100px;
     background-color: transparent;
     transition: ease-in-out .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    img > {
-        height: max-content;
+    > img {
+        height: 40%;
     }
 
     &:hover{
@@ -77,7 +81,7 @@ export const CopyButton = styled.button`
 
 export const GenerateNewPasswordButton = styled.button`
     background-color: #2B64F0;
-    font-size: 28px;
+    font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: bold;
     padding: 20px 0px;
@@ -94,7 +98,7 @@ export const PasswordOptions = styled.div`
 
     > p {
         text-transform: uppercase;
-        font-size: 22px;
+        font-size: 1rem;
         font-weight: bold;
         margin-bottom: 10px;
         color: #576086;
@@ -110,7 +114,7 @@ export const Setting = styled.div`
     border-radius: 10px;
 
     > p {
-        font-size: 23px;
+        font-size: 1.5rem;
     }
 `;
 

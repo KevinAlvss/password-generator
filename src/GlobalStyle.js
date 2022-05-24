@@ -12,6 +12,19 @@ export default createGlobalStyle`
         background-color: #040F2D;
         height:100vh;
         width: 100vw;
+
+        @media (max-width: 1366px) {
+            font-size: 93.75%;
+        }
+
+        @media (max-width: 1080px){
+            font-size: 80%;
+        }
+
+        @media (max-width: 720px){
+            font-size: 87.5%;
+        }
+
     }
 
     html, body, input, button{
